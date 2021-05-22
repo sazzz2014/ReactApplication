@@ -1,7 +1,9 @@
+using DBRepository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.ReactDevelopmentServer;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -21,6 +23,10 @@ namespace WebApplication1
         public void ConfigureServices(IServiceCollection services)
         {
 
+            string connection = Configuration.GetConnectionString("DefaultConnection");
+            // добавляем контекст MobileContext в качестве сервиса в приложение
+            services.AddDbContext<RepositoryContext>(options =>
+                options.UseSqlServer(connection));
             services.AddControllersWithViews();
 
             // In production, the React files will be served from this directory
