@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from "react-dom"
 import { Order } from './Order'
 import { OrdersList } from './OrdersList'
 
@@ -51,52 +52,63 @@ export class OrderForm extends React.Component {
     }
     render() {
         return (
-            <form onSubmit={this.onSubmit}>
-                <h2>Добавление нового заказа:</h2>
-                <p>
-                    Город отправителя:
-                    <input type="text"
-                        placeholder="senderCity"
-                        value={this.state.senderCity}
-                        onChange={this.onSenderCityChange} />
-                </p>
-                <p>
-                    Адрес отправителя:
-                    <input type="text"
-                        placeholder="senderAddress"
-                        value={this.state.senderAddress}
-                        onChange={this.onSenderAddressChange} />
-                </p>
-                <p>
-                    Город получателя:
-                    <input type="text"
-                        placeholder="recipientCity"
-                        value={this.state.recipientCity}
-                        onChange={this.onRecipientCityChange} />
-                </p>
-                <p>
-                    Адрес получателя:
-                    <input type="text"
-                        placeholder="recipientAddress"
-                        value={this.state.recipientAddress}
-                        onChange={this.onRecipientAddressChange} />
-                </p>
-                <p>
-                    Вес груза:
-                    <input type="number"
-                        placeholder="weight"
-                        value={this.state.weight}
-                        onChange={this.onWeightChange} />
-                </p>
-                <p>
-                    Дата забора груза:
-                    <input type="date"
-                        placeholder="pickUpDate"
-                        value={this.state.pickUpDate}
-                        onChange={this.onPickUpDateChange} />
-                </p>
-                <input type="submit" value="Добавить" />
-            </form>
+            <div class='orderForm'>
+                <form onSubmit={this.onSubmit}>
+                    <h2>Добавление нового заказа:</h2>
+                    <p>
+                        Город отправителя:
+                        <input type="text"
+                            required
+                            name="senderCity"
+                            placeholder="senderCity"
+                            value={this.state.senderCity}
+                            onChange={this.onSenderCityChange} />
+                    </p>
+                    <p>
+                        Адрес отправителя:
+                        <input type="text"
+                            required
+                            placeholder="senderAddress"
+                            value={this.state.senderAddress}
+                            onChange={this.onSenderAddressChange} />
+                    </p>
+                    <p>
+                        Город получателя:
+                        <input type="text"
+                            required
+                            placeholder="recipientCity"
+                            value={this.state.recipientCity}
+                            onChange={this.onRecipientCityChange} />
+                    </p>
+                    <p>
+                        Адрес получателя:
+                        <input type="text"
+                            required
+                            placeholder="recipientAddress"
+                            value={this.state.recipientAddress}
+                            onChange={this.onRecipientAddressChange} />
+                    </p>
+                    <p>
+                        Вес груза:
+                        <input type="number"
+                            required
+                            placeholder="weight"
+                            value={this.state.weight}
+                            onChange={this.onWeightChange} />
+                    </p>
+                    <p>
+                        Дата забора груза:
+                        <input type="date"
+                            required
+                            placeholder="pickUpDate"
+                            value={this.state.pickUpDate}
+                            onChange={this.onPickUpDateChange} />
+                    </p>
+                    <input type="submit" value="Добавить" />
+                    
+                </form>
+            </div>
         );
     }
 }
+

@@ -6,9 +6,76 @@ a {
 code {
   color: #E01A76;
 }
+h2{
+    text-align: center;
+}
+label {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #E9EFF6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+input {
+    display: block;
+    width: 100%;
+    padding: 0 20px;
+    margin-bottom: 10px;
+    background: #E9EFF6;
+    line-height: 40px;
+    border-width: 0;
+    border-radius: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type="submit"] {
+    margin-top: 30px;
+    background: #FAAB1B;
+    border-bottom: 4px solid #d87d56;
+    color: white;
+    font-size: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.order {
+    border-radius: 20px;
+    border: 2px solid black;
+    padding: 10px;
+    margin: 5px;
+    color: blue;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+.order label {
+   color: black;
+}
+
+.currentOrders {
+    border-radius: 5px;
+    border: 2px solid blue;
+    padding: 10px;
+    margin: auto 25%;
+    background: #e8bfbf;
+}
+
+.orderForm {
+    border: 2px solid black;
+    padding: 10px;
+    margin: auto 30% 20px;
+    background: #f69a73;
+}
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }

@@ -64,7 +64,7 @@ export class OrdersList extends React.Component {
         var remove = this.onRemoveOrder;
         return <div>
             <OrderForm onOrderSubmit={this.onAddOrder} />
-            <form>
+            <form class ='currentOrders'>
                 <h2>Список текущих заказов:</h2>
                 {
                     this.state.orders.map(function (order) {

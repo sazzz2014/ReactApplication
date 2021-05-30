@@ -12,15 +12,30 @@ export class Order extends React.Component {
         this.props.onRemove(this.state.data);
     }
     render() {
-        return <div>
-            <p>ID: {this.state.data.id}</p>
-            <p>Город отправителя: {this.state.data.senderCity}</p>
-            <p>Адрес отправителя: {this.state.data.senderAddress}</p>
-            <p>Город получателя: {this.state.data.recipientCity}</p>
-            <p>Адрес получателя: {this.state.data.recipientAddress}</p>
-            <p>Вес груза: {this.state.data.weight}</p>
-            <p>Дата забора груза: {this.state.data.pickUpDate.substring(0, 10)}</p>
-            <p><button onClick={this.onClick}>Удалить</button></p>
+        return <div class='order'>
+            <p>ID(номер) заказа: 
+                <label>{this.state.data.id}</label>
+            </p>
+            <p>Город отправителя:
+                <label>{this.state.data.senderCity}</label>
+            </p>
+            <p>Адрес отправителя:
+                <label>{this.state.data.senderAddress}</label>
+            </p>
+            <p>Город получателя:
+                <label>{this.state.data.recipientCity}</label>
+            </p>
+            <p>Адрес получателя:
+                <label>{this.state.data.recipientAddress}</label>
+            </p>
+            <p>Вес груза:
+                <label>{this.state.data.weight}</label>
+            </p>
+            <p>Дата забора груза:
+                <label>{this.state.data.pickUpDate.substring(0, 10)}</label>
+            </p>
+
+            <input onClick={this.onClick} type="submit" value="Удалить" />
         </div>;
     }
 }
